@@ -1,0 +1,10 @@
+# 配置端口号
+server:
+  port: 7777
+
+spring:
+  application:
+    name: config-client-dev # 应用名称
+
+# 自定义名称
+name: config-client-dev
