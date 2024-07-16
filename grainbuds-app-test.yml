@@ -28,3 +28,21 @@ name: grainbuds-app-test
 dataFileSize: 10240KB
 # 数据请求大小
 dataRequestSize: 102400KB
+
+
+# 上传文件/图片路径
+uploadUrl:
+  # 临时图片
+  tempImgPath: imgs/cufImgs/tempImg/
+  # 用户头像
+  accountImagePath: imgs/recycleorgAppImg/accountImag/
+  accountImageSaclePath: imgs/recycleorgAppImg/accountSacleImag/
+  # 订单照片
+  orderImgPath: imgs/recycleorgAppImg/orderImgPath/
+  orderImgSaclePath: imgs/recycleorgAppImg/orderImgSaclePath/
+  # 身份证照片
+  idCardImagePath: imgs/recycleorgAppImg/idCardImagePath/
+  idCardImageSaclePath: imgs/recycleorgAppImg/idCardImageSaclePath/
+  # 营业执照
+  businessLicensePath: imgs/recycleorgAppImg/businessLicensePath/
+  businessLicenseSaclePath: imgs/recycleorgAppImg/businessLicenseSaclePath/

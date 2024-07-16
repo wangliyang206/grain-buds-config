@@ -1,17 +1,17 @@
 # 配置端口号
 server:
-  port: 7777
+  port: 7778
 
 spring:
   application:
-    name: grainbuds-app-dev # 应用名称
-    
-# 连接数据库
-  datasource: 
+    name: grainbuds-app-release # 应用名称
+
+  # 连接数据库
+  datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/GrainBuds?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
-    username: sa
-    password: sa123456
+    url: jdbc:mysql://localhost:3306/appdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: '{cipher}72668ec38339bec638dbbcb648faf73fadea680792c89dcc20ed92e835f6a823'
+    password: '{cipher}9ab26c4ba5de4ebddae00948b82886446b751baeefcfa000c5f24abac65c63a0'
 
 # 配置 Eureka Server 注册中心
 eureka:
@@ -23,8 +23,25 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 # 自定义名称
-name: grainbuds-app-dev
+name: grainbuds-app-release
 # 文件大小
 dataFileSize: 10240KB
 # 数据请求大小
 dataRequestSize: 102400KB
+
+# 上传文件/图片路径
+uploadUrl:
+  # 临时图片
+  tempImgPath: imgs/cufImgs/tempImg/
+  # 用户头像
+  accountImagePath: imgs/recycleorgAppImg/accountImag/
+  accountImageSaclePath: imgs/recycleorgAppImg/accountSacleImag/
+  # 订单照片
+  orderImgPath: imgs/recycleorgAppImg/orderImgPath/
+  orderImgSaclePath: imgs/recycleorgAppImg/orderImgSaclePath/
+  # 身份证照片
+  idCardImagePath: imgs/recycleorgAppImg/idCardImagePath/
+  idCardImageSaclePath: imgs/recycleorgAppImg/idCardImageSaclePath/
+  # 营业执照
+  businessLicensePath: imgs/recycleorgAppImg/businessLicensePath/
+  businessLicenseSaclePath: imgs/recycleorgAppImg/businessLicenseSaclePath/
