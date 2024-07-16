@@ -1,0 +1,30 @@
+# 配置端口号
+server:
+  port: 7777
+
+spring:
+  application:
+    name: grainbuds-app-dev # 应用名称
+    
+# 连接数据库
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/GrainBuds?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: sa
+    password: sa123456
+
+# 配置 Eureka Server 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true                                           # 是否使用 IP 地址注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}     # ip:port
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# 自定义名称
+name: grainbuds-app-dev
+# 文件大小
+dataFileSize: 10240KB
+# 数据请求大小
+dataRequestSize: 102400KB
